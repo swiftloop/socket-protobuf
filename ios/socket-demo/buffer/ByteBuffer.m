@@ -16,7 +16,7 @@
     if (len != 4) {
         @throw [NSException exceptionWithName:@"Exception" reason:@"read int error len!=4" userInfo:nil];
     }
-    return ([self read:data index:NSMakeRange(0, 1)] << 24) | ([self read:data index:NSMakeRange(1,1)] << 16) | ([self read:data index:NSMakeRange(2, 1)] << 8 )| ([self read:data index:NSMakeRange(3, 1)] & 0xff);
+    return ([self read:data index:NSMakeRange(0, 1)] & 0xff) << 24 | ([self read:data index:NSMakeRange(1,1)] &0xff) << 16 | ([self read:data index:NSMakeRange(2, 1)] &0xff) << 8  | ([self read:data index:NSMakeRange(3, 1)] & 0xff);
 }
 
 + (NSMutableData *)writeInt:(int)num{
