@@ -1,0 +1,3 @@
+${PODS_ROOT}/Target Support Files/Pods-socket-demo/Pods-socket-demo-frameworks.sh
+${BUILT_PRODUCTS_DIR}/CocoaAsyncSocket/CocoaAsyncSocket.framework
+${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework

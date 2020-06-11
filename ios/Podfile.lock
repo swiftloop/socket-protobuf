@@ -1,0 +1,20 @@
+PODS:
+  - CocoaAsyncSocket (7.6.4)
+  - Protobuf (3.12.0)
+
+DEPENDENCIES:
+  - CocoaAsyncSocket (~> 7.6)
+  - Protobuf (~> 3.12)
+
+SPEC REPOS:
+  trunk:
+    - CocoaAsyncSocket
+    - Protobuf
+
+SPEC CHECKSUMS:
+  CocoaAsyncSocket: 694058e7c0ed05a9e217d1b3c7ded962f4180845
+  Protobuf: 2793fcd0622a00b546c60e7cbbcc493e043e9bb9
+
+PODFILE CHECKSUM: c72cc38e0663a830878d1e4bbc9bb277e2fac569
+
+COCOAPODS: 1.9.3
