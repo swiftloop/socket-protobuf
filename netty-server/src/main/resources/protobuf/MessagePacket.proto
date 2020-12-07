@@ -1,0 +1,51 @@
+syntax = "proto3";
+option java_package = "com.xinsiwei.netty.message";
+
+message Packet{
+
+  uint32 sid = 1; //服务id
+  uint32 cid = 2; //命令id
+  uint32 ver = 3; //版本
+  string seqNo = 4; //消息id
+  bytes body = 5; //消息体
+
+};
+
+
+
+enum HeartbeatType{
+    PING = 0;
+    PONG = 1;
+};
+
+
+
+message LoginReq{
+
+    string userId = 1;
+    string token = 2;
+    string deviceType = 3;
+    string alias = 4;
+    string tag = 5;
+    string platform = 6;
+
+};
+
+
+
+enum ServiceType{
+    LOGIN = 0; //登录
+    HEARTBEAT = 1; //心跳
+};
+
+
+enum MessageType{
+
+    MSG_TYPE_SINGLE_TEXT = 0; //一对一的文本消息
+    MSG_TYPE_SINGLE_IMAGE = 1; //一对一的图片消息
+    MSG_TYPE_SINGLE_AUDIO = 2; //一对一的语音消息
+
+    MSG_TYPE_GROUP_TEXT = 3; //群组文本消息
+    MSG_TYPE_GROUP_IMAGE = 4; //群组图片消息
+    MSG_TYPE_GROUP_AUDIO = 5; //群组语音消息
+};

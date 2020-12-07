@@ -1,0 +1,13 @@
+syntax = "proto3";
+import "MessagePacket.proto";
+option java_package="com.xinsiwei.netty.message";
+
+
+//消息发送
+message IMMessageReq{
+    uint32 form = 1; //消息发送方
+    uint32 to = 2; //消息接收方
+    MessageType type = 3; //消息类型
+    uint32 create = 4; //消息的发送时间
+    bytes body = 5; //消息内容
+};
